@@ -1,64 +1,48 @@
 # AI Ethics RAG System
 
-This repository contains my **Retrieval-Augmented Generation (RAG) pipeline** built in **Flowise**, using the *Artificial Intelligence (AI) Ethics.pdf* document.  
-The system demonstrates how embeddings, vector storage, and conversational retrieval can be combined to answer questions about AI ethics.
+This repository contains a Retrieval-Augmented Generation (RAG) pipeline built with **Flowise** to process and query documents on **Artificial Intelligence Ethics**.  
+It integrates **Google Gemini embeddings** and **Mistral AI** for conversational retrieval.
+
+---
+
+## 📌 Features
+- Loads and processes the *Artificial Intelligence (AI) Ethics.pdf* paper
+- Splits text into chunks for efficient retrieval
+- Embeds text using **Google Gemini**
+- Stores embeddings in an **in-memory vector store**
+- Uses **Mistral AI** for conversational Q&A
+- Supports **ethical AI queries** with source citations
 
 ---
 
 ## 📂 Repository Structure
-
-- `/chatflow/AI_Ethics_RAG_System.json`  
-  → Exported Flowise Chatflow JSON (import this into Flowise to recreate the pipeline).  
-
-- `/screenshots/`  
-  → Images of the pipeline design and workflow.  
-
-- `/document/Artificial_Intelligence_AI_Ethics.pdf`  
-  → Source document used for embeddings.  
-
-- `/report/AI_Ethics_RAG_Report.docx`  
-  → Written report explaining the system.  
-
-- `/presentation/AI_Ethics_Presentation.pptx`  
-  → Slides prepared for the Internal Assessment.
+- `docs/` → Diagrams, screenshots, and explanations
+- `src/` → Chatflow JSON and configuration files
+- `data/` → AI Ethics PDF used for retrieval
+- `README.md` → Documentation and usage guide
 
 ---
 
-## 🚀 How to Import the Chatflow JSON
-
-1. Open **Flowise**.  
-2. Click the **three dots (⋮)** menu in the top‑right corner.  
-3. Select **Import**.  
-4. Upload the file:
-5. 5. The pipeline will load exactly as designed.
+## 🖼 Workflow Diagram
+![Workflow Diagram](docs/workflow-diagram.png)
 
 ---
 
-## ⚙️ Pipeline Overview
-
-- **File Loader** → Loads the AI Ethics PDF.  
-- **Text Splitter** → Breaks content into chunks.  
-- **Google Gemini Embedding** → Converts text into embeddings.  
-- **Vector Store** → Stores embeddings for retrieval.  
-- **MistralAI** → Generates conversational answers.  
-- **QA Chain** → Combines retriever + LLM + memory for final output.
-
----
-
-## 🖼️ Pipeline Diagram
-
-Here’s the visual workflow of the RAG system:
-
-![Pipeline Diagram](Pipeline%20flowise.png)
+## 🚀 Usage
+1. Install [Flowise](https://flowiseai.com/)
+2. Import the `src/chatflow.json` file into Flowise
+3. Upload the `data/Artificial_Intelligence_AI_Ethics.pdf`
+4. Run the pipeline and query:
+5. Example output:
+> Ethical AI prevents harm, addresses bias, and protects human rights.
 
 ---
 
-## 📖 Project Goal
-
-This project explores whether **RAG systems** can be a solution to **AI Ethics challenges**, by enabling transparent, document‑grounded answers instead of hallucinations.
+## 📖 References
+- Siau, K., & Wang, W. (2020). *Artificial Intelligence (AI) Ethics: Ethics of AI and Ethical AI*. Journal of Database Management, 31(2), 74–87.  
+- Flowise Documentation: https://docs.flowiseai.com/
 
 ---
 
-## 📝 Author
-
-Created by **Isha** for Internal Assessment on *AI Ethics and RAG Systems*.
+## 📜 License
+MIT License
